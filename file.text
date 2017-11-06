@@ -1,0 +1,22 @@
+Starting on 9-30 at 18:10:09
+*** FAIL: test_cases/q3/3-one-ghost-4level.test
+***     Incorrect generated nodes for depth=4
+***         Student generated nodes: A B C D E F I K L a b1 b2 c1 c2 c3 d1 d2 d3 d5 d6
+***         Correct generated nodes: A B C D E F I K a b1 b2 c1 c2 c3 d1 d2 d3 d5 d6
+***     Tree:
+***                 /-----a------\
+***                /              \
+***               /                \
+***             b1                  b2
+***           /    \              /     \
+***        c1        c2        c3        c4
+***       /  \      /  \      /   \     /   \
+***      d1   d2  d3   d4    d5   d6   d7   d8
+***     / \  / \  / \  / \   / \  / \  / \  / \ 
+***     A B  C D  E F  G H   I J  K L  M N  O P
+***     3 13 5 9 10 11 6 8   1 0  4 7 12 15 2 14
+***     
+***     a - max
+***     b - min
+***     c - max
+***     d - min

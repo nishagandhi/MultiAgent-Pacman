@@ -1,0 +1,86 @@
+Starting on 10-1 at 16:06:04
+2
+2
+inside alpha function
+
+agentNumber: 0
+(alpha,beta):( -inf , inf )
+
+ actions generated: ['Left', 'Right']
+initial bestaction Left
+Now calling the beta function with agentnumber 1
+inside beta function
+
+agentNumber: 1
+(alpha,beta):( -inf , inf )
+
+ actions generated: ['Left', 'Right']
+action: Left
+Now calling the alpha function with agentnumber 0 from beta
+ depth: 1
+1
+2
+inside alpha function
+
+agentNumber: 0
+(alpha,beta):( -inf , inf )
+
+ actions generated: ['Left', 'Right']
+initial bestaction Left
+returning: -3.0 from alpha function!
+Left inside action
+returning: -9.0 from alpha function!
+action chosen: Left
+returning v: -3.0
+beta: inf v: -3.0
+action: Right
+beta: -3.0 v: -3.0
+returning v: -3.0
+Left inside action
+Now calling the beta function with agentnumber 1
+inside beta function
+
+agentNumber: 1
+(alpha,beta):( -3.0 , inf )
+
+ actions generated: ['Down']
+action: Down
+Now calling the alpha function with agentnumber 0 from beta
+ depth: 1
+1
+2
+inside alpha function
+
+agentNumber: 0
+(alpha,beta):( -3.0 , inf )
+
+ actions generated: ['Down']
+initial bestaction Down
+returning: -4.01 from alpha function!
+Down inside action
+action chosen: Down
+returning v: -4.01
+action chosen: Left
+returning v: -3.0
+*** FAIL: test_cases/q3/2-1b-vary-depth.test
+***     Incorrect generated nodes for depth=2
+***         Student generated nodes: a b1 b2 c1 c2 cx d1 d2 dx
+***         Correct generated nodes: a b1 b2 c1 c2 cx d1 d2 d3 dx
+***     Tree:
+***                 /-----a------\
+***                /              \
+***               /                \
+***             b1                  b2
+***           /    \                 |
+***     -4 c1        c2 9           cx -4.01
+***       /  \      /  \             |
+***      d1   d2  d3   d4           dx
+***     -3    -9  10    6         -4.01
+***     
+***     a - max
+***     b - min
+***     c - max
+***     
+***     Note that the minimax value of b1 is -3, but the depth=1 limited value is -4.
+***     The values next to c1, c2, and cx are the values of the evaluation function, not
+***     necessarily the correct minimax backup.
